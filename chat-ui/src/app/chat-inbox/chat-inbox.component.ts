@@ -1,8 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-// import * as io from 'socket.io-client';
-// import { environment } from 'src/environments/environment';
 import { SocketService } from 'src/app/socket.service';
-// import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-chat-inbox',
@@ -28,6 +25,9 @@ export class ChatInboxComponent implements OnInit, OnDestroy {
     this.socketService.disconnect();
   }
 
+  /**
+   * Sends message via socketService and adds the message to the messageList and finally clears the message
+   */
   sendMessage(): void {
     this.socketService.sendMessage(this.message);
     this.messageList.push({ message: this.message, mine: true });

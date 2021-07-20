@@ -1,0 +1,49 @@
+.chat-messages {
+  height: 90vh;
+}
+
+.chat-messages-inbox-container {
+  background: #fff897;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.chat-messages-inbox-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-messages-create-container {
+  background: #aaa239;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.chat-messages-create-input {
+  padding: 12px;
+  margin: 29px 30px;
+  flex:2
+}
+
+.chat-messages-create-button {
+  height: 50px;
+  margin: auto 40px;
+  width: 100px;
+}
+
+.individual-message {
+  background: white;
+  padding: 15px 30px;
+  margin: 10px;
+}
+
+.individual-message-mine {
+  background: white;
+  padding: 15px 30px;
+  margin: 10px;
+  text-align: right;
+}

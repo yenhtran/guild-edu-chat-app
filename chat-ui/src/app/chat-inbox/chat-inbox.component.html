@@ -1,0 +1,12 @@
+<div class="chat-messages">
+  <div class="chat-messages-inbox-container">
+    <ul class="chat-messages-inbox-list" *ngFor="let msg of messageList">
+      <li *ngIf="msg.mine" class="individual-message-mine">{{ msg.message }}</li>
+      <li *ngIf="!msg.mine" class="individual-message">{{ msg.message }}</li>
+    </ul>
+  </div>
+  <div class="chat-messages-create-container">
+    <input class="chat-messages-create-input" type="text" [(ngModel)]="message">
+    <button class="chat-messages-create-button" (click)="sendMessage()"> SEND </button>
+  </div>
+</div>
